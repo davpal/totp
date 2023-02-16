@@ -1,0 +1,24 @@
+{
+  "name": "totp-react",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://davpal.github.io/totp",
+  "scripts": {
+    "build": "parcel build --public-url /totp --dist-dir docs/ --no-cache src/index.html",
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.8.3",
+    "qrcode": "^1.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "totp-generator": "^0.0.14"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "process": "^0.11.10"
+  }
+}

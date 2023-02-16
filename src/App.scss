@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: calc(100vh - 2em);
+  font-size: 16px;
+  font-family: Helvetica, Arial, Sans;
+  color: #444;
+}
+
+a, a:visited {
+  color: rgb(49, 49, 230);
+}
+
+.footer {
+  text-align: center;
+}
+
+.totp-generator {
+  max-width: 500px;
+  width: 90%;
+  margin: 2em auto 0;
+}
+
+.otp {
+  font-size: 3em; 
+  text-align: center;
+  height: 1em;
+  padding: 0.2em 1em;
+  font-weight: 700;
+}
+
+.qr {
+  text-align: center;
+}
+
+.input {
+  input, label { 
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-weight: 700;
+  }
+
+  input {
+    border-radius: 0.2em;
+    border: 1px solid #bbb;
+    padding: 0.4em 0.7em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  margin: 0.8em 0;
+}
+
+.otp-progress {
+  .otp-progress-bar {
+    display: block;
+    height: 0.5em;
+    border-radius: 0.5em;
+    transition: 0.2s width;
+  }
+
+  .progress-text {
+    font-size: 0.8em;
+    color: #666;
+    margin: 0.5em 0;
+  }
+
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0.5em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
