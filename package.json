@@ -4,6 +4,7 @@
   "description": "",
   "homepage": "https://davpal.github.io/totp",
   "scripts": {
+    "prebuild": "rm -rf docs",
     "build": "parcel build --public-url /totp --dist-dir docs/ --no-cache src/index.html",
     "start": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
