@@ -20,6 +20,10 @@ const OtpCode = ({ secret, period, digits }) => {
     return () => clearInterval(interval);
   }, [otpTimeLeft]);
 
+  if(digits <= 0 || period <= 0 || !secret) {
+    return <p>Input options are invalid</p>;
+  }
+
   const percentage = Math.floor((otpTimeLeft / period) * 100) || 0;
   const progressColor = `hsl(${percentage}, 80%, 70%)`;
   const otp = totp(secret.replace(/\s/g, ""), { digits, period });
@@ -33,7 +37,7 @@ const OtpCode = ({ secret, period, digits }) => {
           style={{ width: percentage + "%", background: progressColor }}
         ></span>
       </div>
-      <div className="otp">{otp}</div>;
+      <div className="otp">{otp}</div>
     </>
   );
 };
